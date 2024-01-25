@@ -2,6 +2,7 @@ from fastapi.testclient import TestClient
 import json
 from main import app
 from src.ml.training import load_config
+
 configs = load_config()
 
 client = TestClient(app)
@@ -10,7 +11,7 @@ client = TestClient(app)
 data_0 = {
     "age": 18,
     "workclass": "Local_gov",
-    "fnlgt": 1.794650e+05,
+    "fnlgt": 1.794650e05,
     "education": "10th",
     "education_num": 8,
     "marital_status": "Never_married",
@@ -21,13 +22,13 @@ data_0 = {
     "capital_gain": 100,
     "capital_loss": 50,
     "hours_per_week": 0,
-    "native_country": "Mexico"
+    "native_country": "Mexico",
 }
 
 data_1 = {
     "age": 50,
     "workclass": "Private",
-    "fnlgt": 1.880050e+05,
+    "fnlgt": 1.880050e05,
     "education": "Masters",
     "education_num": 12,
     "marital_status": "Married_civ_spouse",
@@ -38,7 +39,7 @@ data_1 = {
     "capital_gain": 40174,
     "capital_loss": 195,
     "hours_per_week": 50,
-    "native_country": "United_States"
+    "native_country": "United_States",
 }
 
 
@@ -66,7 +67,7 @@ def test_predict_income_valid_1():
 
 def test_predict_income_numerical_invalid():
     # Replace this with invalid data for your model
-    for key in configs['model']['num_features']:
+    for key in configs["model"]["num_features"]:
         data = data_1
         data[key] = -1
         response = client.post("/predict", json=data)
@@ -75,7 +76,7 @@ def test_predict_income_numerical_invalid():
 
 def test_predict_income_categorical_invalid():
     # Replace this with invalid data for your model
-    for key in configs['model']['cat_features']:
+    for key in configs["model"]["cat_features"]:
         data = data_1
         data[key] = "invalid"
         response = client.post("/predict", json=data)
