@@ -20,9 +20,6 @@ from src.ml.model import (
     load_data,
 )
 
-from src.ml.model import load_model
-
-
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -58,11 +55,13 @@ def create_pipeline():
     )
 
     pipeline = Pipeline(
-        steps=[("preprocessor", preprocessor), ("classifier", RandomForestClassifier())]
+        steps=[("preprocessor", preprocessor),
+               ("classifier", RandomForestClassifier())]
     )
 
     used_columns = list(
-        itertools.chain.from_iterable([x[2] for x in preprocessor.transformers])
+        itertools.chain.from_iterable(
+            [x[2] for x in preprocessor.transformers])
     )
 
     return pipeline, used_columns
@@ -92,7 +91,8 @@ def train_ml():
     # validate
     y_pred = pipe.predict(X_test[used_columns])
     # evaluate results
-    precision, recall, fbeta, accuracy, f1 = compute_model_metrics(y_test, y_pred)
+    precision, recall, fbeta, accuracy, f1 = compute_model_metrics(
+        y_test, y_pred)
 
     logging.info("Precision: %s", precision)
     logging.info("Recall: %s", recall)
@@ -136,7 +136,8 @@ def infer_ml(X: pd.DataFrame):
     pipe, lb, used_columns = load_model()
     missing_columns = set(X.columns) - set(used_columns)
     if missing_columns:
-        logging.warning("Columns %s are missing from the config file", missing_columns)
+        logging.warning(
+            "Columns %s are missing from the config file", missing_columns)
 
     y_pred = pipe.predict(X[used_columns])
     y_labels = lb.inverse_transform(y_pred)

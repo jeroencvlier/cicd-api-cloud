@@ -1,5 +1,3 @@
-import os
-import logging
 import pandas as pd
 from src.ml.model import load_data, load_variables, compute_model_metrics
 
