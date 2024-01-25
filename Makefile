@@ -33,10 +33,6 @@ test: install
 	@echo "Running tests..."
 	@$(PYTHON) -m pytest -v
 
-sanity:
-	@echo "Running sanity check..."
-	@$(PYTHON_INTERPRETER) $(PROJECT_ROOT)/sanitycheck.py $(PROJECT_ROOT)/tests/test_api.py
-
 train:
 	@echo "Training model..."
 	@$(PYTHON_INTERPRETER) $(PROJECT_ROOT)/src/train_model.py
@@ -56,7 +52,6 @@ help:
 	@echo "  install  - Install the project and dependencies"
 	@echo "  dev      - Set up the development environment"
 	@echo "  test     - Run tests"
-	@echo "  sanity   - Run sanity check"
 	@echo "  train    - Train model"
 	@echo "  clean    - Clean up the project"
 	@echo "  help     - Show this message"

@@ -1,17 +1,6 @@
-# API Creation
-# Create a RESTful API using FastAPI this must implement:
-# GET on the root giving a welcome message.
-# POST that does model inference.
-# Type hinting must be used.
-# Use a Pydantic model to ingest the body from POST. This model should contain an example.
-# Hint: the data has names with hyphens and Python does not allow those as variable names. Do not modify the column names in the csv and instead use the functionality of FastAPI/Pydantic/etc to deal with this.
-# Write 3 unit tests to test the API (one for the GET and two for POST, one that tests each prediction).
-
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
-from typing import List
+from pydantic import BaseModel
 import pandas as pd
-import numpy as np
 
 from src.ml.training import infer_ml, load_model
 
@@ -66,7 +55,8 @@ async def exercise_function(data: IncomePrediction):
     cat_columns, categories = catagorical_check()
     for col, catagory in zip(cat_columns, categories):
         if getattr(data, col) not in catagory:
-            raise HTTPException(status_code=400, detail=f"Invalid input for {col}")
+            raise HTTPException(
+                status_code=400, detail=f"Invalid input for {col}")
 
     if (
         getattr(data, "age") < 0
@@ -77,12 +67,12 @@ async def exercise_function(data: IncomePrediction):
         or getattr(data, "hours_per_week") < 0
     ):
         raise HTTPException(
-            status_code=400, detail=f"Invalid input for numerical columns"
+            status_code=400, detail="Invalid input for numerical columns"
         )
 
     if getattr(data, "age") > 110 or getattr(data, "hours_per_week") > 100:
         raise HTTPException(
-            status_code=400, detail=f"Invalid input for numerical columns"
+            status_code=400, detail="Invalid input for numerical columns"
         )
 
     data = pd.DataFrame([data.dict()])

@@ -1,5 +1,4 @@
 from fastapi.testclient import TestClient
-import json
 from main import app
 from src.ml.training import load_config
 
