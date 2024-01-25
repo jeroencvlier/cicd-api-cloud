@@ -1,0 +1,629 @@
+Computing metrics on categorical slices:
+
+	Column: workclass
+		State-gov
+			Precision: 0.9535
+			Recall: 0.9292
+			FBeta: 0.9412
+			Accuracy: 0.9684
+			F1: 0.9412
+		Self-emp-not-inc
+			Precision: 0.9556
+			Recall: 0.8909
+			FBeta: 0.9221
+			Accuracy: 0.9571
+			F1: 0.9221
+		Private
+			Precision: 0.9476
+			Recall: 0.9263
+			FBeta: 0.9368
+			Accuracy: 0.9727
+			F1: 0.9368
+		Federal-gov
+			Precision: 0.9565
+			Recall: 0.9488
+			FBeta: 0.9526
+			Accuracy: 0.9635
+			F1: 0.9526
+		Local-gov
+			Precision: 0.9507
+			Recall: 0.9368
+			FBeta: 0.9437
+			Accuracy: 0.967
+			F1: 0.9437
+		?
+			Precision: 0.9755
+			Recall: 0.8325
+			FBeta: 0.8983
+			Accuracy: 0.9804
+			F1: 0.8983
+		Self-emp-inc
+			Precision: 0.9691
+			Recall: 0.9566
+			FBeta: 0.9628
+			Accuracy: 0.9588
+			F1: 0.9628
+		Without-pay
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Never-worked
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+
+	Column: education
+		Bachelors
+			Precision: 0.9499
+			Recall: 0.9563
+			FBeta: 0.9531
+			Accuracy: 0.961
+			F1: 0.9531
+		HS-grad
+			Precision: 0.9402
+			Recall: 0.883
+			FBeta: 0.9107
+			Accuracy: 0.9724
+			F1: 0.9107
+		11th
+			Precision: 1.0
+			Recall: 0.85
+			FBeta: 0.9189
+			Accuracy: 0.9923
+			F1: 0.9189
+		Masters
+			Precision: 0.9675
+			Recall: 0.9635
+			FBeta: 0.9655
+			Accuracy: 0.9617
+			F1: 0.9655
+		9th
+			Precision: 1.0
+			Recall: 0.7407
+			FBeta: 0.8511
+			Accuracy: 0.9864
+			F1: 0.8511
+		Some-college
+			Precision: 0.9455
+			Recall: 0.9005
+			FBeta: 0.9225
+			Accuracy: 0.9712
+			F1: 0.9225
+		Assoc-acdm
+			Precision: 0.9341
+			Recall: 0.9094
+			FBeta: 0.9216
+			Accuracy: 0.9616
+			F1: 0.9216
+		Assoc-voc
+			Precision: 0.9349
+			Recall: 0.8753
+			FBeta: 0.9041
+			Accuracy: 0.9515
+			F1: 0.9041
+		7th-8th
+			Precision: 1.0
+			Recall: 0.9
+			FBeta: 0.9474
+			Accuracy: 0.9938
+			F1: 0.9474
+		Doctorate
+			Precision: 0.9804
+			Recall: 0.9804
+			FBeta: 0.9804
+			Accuracy: 0.9709
+			F1: 0.9804
+		Prof-school
+			Precision: 0.9675
+			Recall: 0.9858
+			FBeta: 0.9766
+			Accuracy: 0.9653
+			F1: 0.9766
+		5th-6th
+			Precision: 1.0
+			Recall: 0.9375
+			FBeta: 0.9677
+			Accuracy: 0.997
+			F1: 0.9677
+		10th
+			Precision: 0.9804
+			Recall: 0.8065
+			FBeta: 0.885
+			Accuracy: 0.9861
+			F1: 0.885
+		1st-4th
+			Precision: 1.0
+			Recall: 0.6667
+			FBeta: 0.8
+			Accuracy: 0.9881
+			F1: 0.8
+		Preschool
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		12th
+			Precision: 1.0
+			Recall: 0.8485
+			FBeta: 0.918
+			Accuracy: 0.9885
+			F1: 0.918
+
+	Column: marital-status
+		Never-married
+			Precision: 0.9823
+			Recall: 0.9043
+			FBeta: 0.9417
+			Accuracy: 0.9949
+			F1: 0.9417
+		Married-civ-spouse
+			Precision: 0.9465
+			Recall: 0.9328
+			FBeta: 0.9396
+			Accuracy: 0.9464
+			F1: 0.9396
+		Divorced
+			Precision: 0.9806
+			Recall: 0.8747
+			FBeta: 0.9247
+			Accuracy: 0.9851
+			F1: 0.9247
+		Married-spouse-absent
+			Precision: 1.0
+			Recall: 0.7941
+			FBeta: 0.8852
+			Accuracy: 0.9833
+			F1: 0.8852
+		Separated
+			Precision: 1.0
+			Recall: 0.8485
+			FBeta: 0.918
+			Accuracy: 0.9902
+			F1: 0.918
+		Married-AF-spouse
+			Precision: 1.0
+			Recall: 0.8
+			FBeta: 0.8889
+			Accuracy: 0.913
+			F1: 0.8889
+		Widowed
+			Precision: 1.0
+			Recall: 0.8471
+			FBeta: 0.9172
+			Accuracy: 0.9869
+			F1: 0.9172
+
+	Column: occupation
+		Adm-clerical
+			Precision: 0.9176
+			Recall: 0.9231
+			FBeta: 0.9204
+			Accuracy: 0.9785
+			F1: 0.9204
+		Exec-managerial
+			Precision: 0.9525
+			Recall: 0.9568
+			FBeta: 0.9546
+			Accuracy: 0.956
+			F1: 0.9546
+		Handlers-cleaners
+			Precision: 1.0
+			Recall: 0.8605
+			FBeta: 0.925
+			Accuracy: 0.9912
+			F1: 0.925
+		Prof-specialty
+			Precision: 0.9586
+			Recall: 0.9591
+			FBeta: 0.9589
+			Accuracy: 0.963
+			F1: 0.9589
+		Other-service
+			Precision: 1.0
+			Recall: 0.8759
+			FBeta: 0.9339
+			Accuracy: 0.9948
+			F1: 0.9339
+		Sales
+			Precision: 0.9572
+			Recall: 0.9105
+			FBeta: 0.9333
+			Accuracy: 0.9649
+			F1: 0.9333
+		Craft-repair
+			Precision: 0.9374
+			Recall: 0.887
+			FBeta: 0.9115
+			Accuracy: 0.961
+			F1: 0.9115
+		Transport-moving
+			Precision: 0.9463
+			Recall: 0.8812
+			FBeta: 0.9126
+			Accuracy: 0.9662
+			F1: 0.9126
+		Farming-fishing
+			Precision: 0.9712
+			Recall: 0.8783
+			FBeta: 0.9224
+			Accuracy: 0.9829
+			F1: 0.9224
+		Machine-op-inspct
+			Precision: 0.9537
+			Recall: 0.824
+			FBeta: 0.8841
+			Accuracy: 0.973
+			F1: 0.8841
+		Tech-support
+			Precision: 0.9491
+			Recall: 0.9223
+			FBeta: 0.9355
+			Accuracy: 0.9612
+			F1: 0.9355
+		?
+			Precision: 0.9755
+			Recall: 0.8325
+			FBeta: 0.8983
+			Accuracy: 0.9805
+			F1: 0.8983
+		Protective-serv
+			Precision: 0.9333
+			Recall: 0.9289
+			FBeta: 0.9311
+			Accuracy: 0.9553
+			F1: 0.9311
+		Armed-Forces
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Priv-house-serv
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+
+	Column: relationship
+		Not-in-family
+			Precision: 0.9833
+			Recall: 0.8925
+			FBeta: 0.9357
+			Accuracy: 0.9874
+			F1: 0.9357
+		Husband
+			Precision: 0.9474
+			Recall: 0.9339
+			FBeta: 0.9406
+			Accuracy: 0.9471
+			F1: 0.9406
+		Wife
+			Precision: 0.9373
+			Recall: 0.9235
+			FBeta: 0.9304
+			Accuracy: 0.9343
+			F1: 0.9304
+		Own-child
+			Precision: 0.9836
+			Recall: 0.8955
+			FBeta: 0.9375
+			Accuracy: 0.9984
+			F1: 0.9375
+		Unmarried
+			Precision: 0.9892
+			Recall: 0.844
+			FBeta: 0.9109
+			Accuracy: 0.9896
+			F1: 0.9109
+		Other-relative
+			Precision: 1.0
+			Recall: 0.8378
+			FBeta: 0.9118
+			Accuracy: 0.9939
+			F1: 0.9118
+
+	Column: race
+		White
+			Precision: 0.9508
+			Recall: 0.9262
+			FBeta: 0.9384
+			Accuracy: 0.9689
+			F1: 0.9384
+		Black
+			Precision: 0.9746
+			Recall: 0.8915
+			FBeta: 0.9312
+			Accuracy: 0.9837
+			F1: 0.9312
+		Asian-Pac-Islander
+			Precision: 0.9393
+			Recall: 0.9529
+			FBeta: 0.946
+			Accuracy: 0.9711
+			F1: 0.946
+		Amer-Indian-Eskimo
+			Precision: 0.9429
+			Recall: 0.9167
+			FBeta: 0.9296
+			Accuracy: 0.9839
+			F1: 0.9296
+		Other
+			Precision: 1.0
+			Recall: 0.84
+			FBeta: 0.913
+			Accuracy: 0.9852
+			F1: 0.913
+
+	Column: sex
+		Male
+			Precision: 0.9508
+			Recall: 0.9302
+			FBeta: 0.9404
+			Accuracy: 0.9639
+			F1: 0.9404
+		Female
+			Precision: 0.9566
+			Recall: 0.8965
+			FBeta: 0.9256
+			Accuracy: 0.9842
+			F1: 0.9256
+
+	Column: native-country
+		United-States
+			Precision: 0.9516
+			Recall: 0.925
+			FBeta: 0.9381
+			Accuracy: 0.97
+			F1: 0.9381
+		Cuba
+			Precision: 1.0
+			Recall: 0.92
+			FBeta: 0.9583
+			Accuracy: 0.9789
+			F1: 0.9583
+		Jamaica
+			Precision: 1.0
+			Recall: 0.7
+			FBeta: 0.8235
+			Accuracy: 0.963
+			F1: 0.8235
+		India
+			Precision: 0.9474
+			Recall: 0.9
+			FBeta: 0.9231
+			Accuracy: 0.94
+			F1: 0.9231
+		?
+			Precision: 0.9456
+			Recall: 0.9521
+			FBeta: 0.9488
+			Accuracy: 0.9743
+			F1: 0.9488
+		Mexico
+			Precision: 1.0
+			Recall: 0.8485
+			FBeta: 0.918
+			Accuracy: 0.9922
+			F1: 0.918
+		South
+			Precision: 0.9333
+			Recall: 0.875
+			FBeta: 0.9032
+			Accuracy: 0.9625
+			F1: 0.9032
+		Puerto-Rico
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Honduras
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		England
+			Precision: 0.9643
+			Recall: 0.9
+			FBeta: 0.931
+			Accuracy: 0.9556
+			F1: 0.931
+		Canada
+			Precision: 0.973
+			Recall: 0.9231
+			FBeta: 0.9474
+			Accuracy: 0.9669
+			F1: 0.9474
+		Germany
+			Precision: 0.975
+			Recall: 0.8864
+			FBeta: 0.9286
+			Accuracy: 0.9562
+			F1: 0.9286
+		Iran
+			Precision: 1.0
+			Recall: 0.8889
+			FBeta: 0.9412
+			Accuracy: 0.9535
+			F1: 0.9412
+		Philippines
+			Precision: 0.9385
+			Recall: 1.0
+			FBeta: 0.9683
+			Accuracy: 0.9798
+			F1: 0.9683
+		Italy
+			Precision: 1.0
+			Recall: 0.88
+			FBeta: 0.9362
+			Accuracy: 0.9589
+			F1: 0.9362
+		Poland
+			Precision: 1.0
+			Recall: 0.9167
+			FBeta: 0.9565
+			Accuracy: 0.9833
+			F1: 0.9565
+		Columbia
+			Precision: 0.5
+			Recall: 1.0
+			FBeta: 0.6667
+			Accuracy: 0.9661
+			F1: 0.6667
+		Cambodia
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Thailand
+			Precision: 1.0
+			Recall: 0.6667
+			FBeta: 0.8
+			Accuracy: 0.9444
+			F1: 0.8
+		Ecuador
+			Precision: 0.8
+			Recall: 1.0
+			FBeta: 0.8889
+			Accuracy: 0.9643
+			F1: 0.8889
+		Laos
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Taiwan
+			Precision: 0.9524
+			Recall: 1.0
+			FBeta: 0.9756
+			Accuracy: 0.9804
+			F1: 0.9756
+		Haiti
+			Precision: 1.0
+			Recall: 0.5
+			FBeta: 0.6667
+			Accuracy: 0.9545
+			F1: 0.6667
+		Portugal
+			Precision: 1.0
+			Recall: 0.75
+			FBeta: 0.8571
+			Accuracy: 0.973
+			F1: 0.8571
+		Dominican-Republic
+			Precision: 0.5
+			Recall: 1.0
+			FBeta: 0.6667
+			Accuracy: 0.9714
+			F1: 0.6667
+		El-Salvador
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		France
+			Precision: 0.8571
+			Recall: 1.0
+			FBeta: 0.9231
+			Accuracy: 0.931
+			F1: 0.9231
+		Guatemala
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		China
+			Precision: 0.9091
+			Recall: 1.0
+			FBeta: 0.9524
+			Accuracy: 0.9733
+			F1: 0.9524
+		Japan
+			Precision: 0.9167
+			Recall: 0.9167
+			FBeta: 0.9167
+			Accuracy: 0.9355
+			F1: 0.9167
+		Yugoslavia
+			Precision: 1.0
+			Recall: 0.8333
+			FBeta: 0.9091
+			Accuracy: 0.9375
+			F1: 0.9091
+		Peru
+			Precision: 0.6667
+			Recall: 1.0
+			FBeta: 0.8
+			Accuracy: 0.9677
+			F1: 0.8
+		Outlying-US(Guam-USVI-etc)
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Scotland
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Trinadad&Tobago
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Greece
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Nicaragua
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Vietnam
+			Precision: 0.8333
+			Recall: 1.0
+			FBeta: 0.9091
+			Accuracy: 0.9851
+			F1: 0.9091
+		Hong
+			Precision: 1.0
+			Recall: 0.8333
+			FBeta: 0.9091
+			Accuracy: 0.95
+			F1: 0.9091
+		Ireland
+			Precision: 1.0
+			Recall: 0.8
+			FBeta: 0.8889
+			Accuracy: 0.9583
+			F1: 0.8889
+		Hungary
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0
+		Holand-Netherlands
+			Precision: 1.0
+			Recall: 1.0
+			FBeta: 1.0
+			Accuracy: 1.0
+			F1: 1.0

@@ -1,0 +1,23 @@
+{
+    "model": {
+        "cat_features": [
+            "workclass",
+            "education",
+            "marital-status",
+            "occupation",
+            "relationship",
+            "race",
+            "sex",
+            "native-country"
+        ],
+        "num_features": [
+            "age",
+            "fnlgt",
+            "education-num",
+            "capital-gain",
+            "capital-loss",
+            "hours-per-week"
+        ],
+        "target": "salary"
+    }
+}
