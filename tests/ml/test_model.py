@@ -17,14 +17,40 @@ def test_load_variables():
     assert isinstance(model_path, str)
     assert isinstance(label_path, str)
     assert isinstance(used_columns_path, str)
-    assert model_path.endswith('.pkl')
-    assert label_path.endswith('.pkl')
-    assert used_columns_path.endswith('.pkl')
+    assert model_path.endswith(".pkl")
+    assert label_path.endswith(".pkl")
+    assert used_columns_path.endswith(".pkl")
 
 
 def test_compute_model_metrics():
-    y = [0, 1, 0, 1, 0, 1, 0, 0, 0,  1, 0, 1, ]
-    preds = [0, 1, 0, 1, 1, 1, 0, 0, 0,  1, 0, 1, ]
+    y = [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+    ]
+    preds = [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+    ]
     precision, recall, fbeta, accuracy, f1 = compute_model_metrics(y, preds)
     assert isinstance(precision, float)
     assert isinstance(recall, float)
