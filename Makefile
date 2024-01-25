@@ -23,13 +23,18 @@ install:
 	@$(PIP) install --upgrade pip
 	@$(PIP) install -r requirements.txt -qq
 	@$(PIP) install -e .
+	@$(PIP) install flake8 pytest
 	@echo "Dependencies installed."
+
+flake:
+	@echo "Running flake8..."
+	@$(PYTHON) -m flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
 
 dev: setup install
 	@echo "To activate the virtual environment, run:"
 	@echo "      >>>   source $(VENV)/bin/activate   <<<     "
 
-test: install
+test: install, flake
 	@echo "Running tests..."
 	@$(PYTHON) -m pytest -v
 
@@ -41,7 +46,7 @@ train:
 	@echo "Training model..."
 	@$(PYTHON_INTERPRETER) $(PROJECT_ROOT)/src/train_model.py
 
-clean:
+clean: flake
 	@echo "Cleaning up..."
 	@rm -rf $(VENV)
 	@find . -type f -name '*.pyc' -delete
@@ -49,7 +54,6 @@ clean:
 	@rm -rf cicd.egg-info
 	@rm -rf .pytest_cache
 	@echo "Clean up complete."
-
 
 help:
 	@echo "Available commands:"
