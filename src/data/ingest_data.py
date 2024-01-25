@@ -32,8 +32,8 @@ def white_space_stripper(df):
     return df
 
 
-def data_preprocessing(df):
-    """Preprocesses the data and returns a pandas dataframe.
+def hyphen_remover(df):
+    """Removes hyphens from column names and values in the dataframe.
 
     Args:
         df: Pandas dataframe.
@@ -41,8 +41,11 @@ def data_preprocessing(df):
     Returns:
         df: Pandas dataframe.
     """
-    logging.info('Preprocessing target variable')
-    df['salary'] = df['salary'].map({'<=50K': 0, '>50K': 1})
+    logging.info('Removing hyphens from column names and values')
+    df.columns = df.columns.str.replace('-', '_')
+    for col in df.columns:
+        if df[col].dtype == 'object':
+            df[col] = df[col].str.replace('-', '_')
     return df
 
 
@@ -61,7 +64,7 @@ def save_data(df):
 def clean_main():
     df = data_ingestion()
     df = white_space_stripper(df)
-    # df = data_preprocessing(df)
+    df = hyphen_remover(df)
     save_data(df)
 
 

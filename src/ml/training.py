@@ -17,6 +17,8 @@ from src.ml.model import (compute_model_metrics,
                           load_model, compute_metrics_on_cat_slices,
                           load_config, load_variables, load_data)
 
+from src.ml.model import load_model
+
 
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -106,8 +108,6 @@ def train_ml():
         f.write(f'Accuracy: {accuracy}\n')
         f.write(f'F1: {f1}\n')
 
-    compute_metrics_on_cat_slices()
-
     # serialise the model
     with open(model_path, 'wb') as f:
         pickle.dump(pipe, f)
@@ -117,6 +117,8 @@ def train_ml():
 
     with open(used_columns_path, 'wb') as f:
         pickle.dump(used_columns, f)
+
+    compute_metrics_on_cat_slices()
 
 
 def infer_ml(X: pd.DataFrame):

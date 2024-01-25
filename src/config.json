@@ -3,20 +3,20 @@
         "cat_features": [
             "workclass",
             "education",
-            "marital-status",
+            "marital_status",
             "occupation",
             "relationship",
             "race",
             "sex",
-            "native-country"
+            "native_country"
         ],
         "num_features": [
             "age",
             "fnlgt",
-            "education-num",
-            "capital-gain",
-            "capital-loss",
-            "hours-per-week"
+            "education_num",
+            "capital_gain",
+            "capital_loss",
+            "hours_per_week"
         ],
         "target": "salary"
     }

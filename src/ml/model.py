@@ -44,7 +44,7 @@ def load_config() -> dict:
     """
     project_root = get_project_root()
     json_path = os.path.join(project_root, 'src', 'config.json')
-    logging.info(f'Loading config from {json_path}')
+    logging.info('Loading config from %s', json_path)
     with open(json_path, encoding='utf-8') as f:
         config = json.load(f)
     return config

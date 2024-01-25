@@ -1,5 +1,5 @@
-Precision: 0.7246
-Recall: 0.6342
-FBeta: 0.6764
-Accuracy: 0.8566
-F1: 0.6764
+Precision: 0.7375
+Recall: 0.6259
+FBeta: 0.6771
+Accuracy: 0.8577
+F1: 0.6771
