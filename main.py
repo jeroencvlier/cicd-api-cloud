@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import pandas as pd
 
 from src.ml.training import infer_ml, load_model
@@ -13,20 +13,20 @@ app = FastAPI(
 
 
 class IncomePrediction(BaseModel):
-    workclass: str
-    education: str
-    marital_status: str
-    occupation: str
-    relationship: str
-    race: str
-    sex: str
-    native_country: str
-    age: int
-    fnlgt: int
-    education_num: int
-    capital_gain: int
-    capital_loss: int
-    hours_per_week: int
+    workclass: str = Field(..., example="Private")
+    education: str = Field(..., example="Masters")
+    marital_status: str = Field(..., example="Married_civ_spouse")
+    occupation: str = Field(..., example="Exec_managerial")
+    relationship: str = Field(..., example="Husband")
+    race: str = Field(..., example="White")
+    sex: str = Field(..., example="Male")
+    native_country: str = Field(..., example="United_States")
+    age: int = Field(..., example=50)
+    fnlgt: int = Field(..., example=77516)
+    education_num: int = Field(..., example=13)
+    capital_gain: int = Field(..., example=2174)
+    capital_loss: int = Field(..., example=0)
+    hours_per_week: int = Field(..., example=40)
 
 
 def catagorical_check():
