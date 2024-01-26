@@ -35,12 +35,14 @@ data_1 = {
     "native_country": "United_States",
 }
 
-headers = {'Content-Type': 'application/json'}
+def live_api_call(data):
+    headers = {'Content-Type': 'application/json'}
+    url = 'https://cicd-api-cloud.onrender.com/predict'
+    print('Posting prediction to: ', url)
+    response = requests.post(url, data=json.dumps(data), headers=headers)
+    print('Status code: ', response.status_code)
+    print('Prediction: ', response.json()['prediction'])
 
-url = 'https://cicd-api-cloud.onrender.com/predict' 
-
-response = requests.post(url, data=json.dumps(data_0), headers=headers)
-print(response.text)
-
-response = requests.post(url, data=json.dumps(data_1), headers=headers)
-print(response.text)
+if __name__ == '__main__':
+    live_api_call(data_0)
+    live_api_call(data_1)
